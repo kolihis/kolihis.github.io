@@ -67,3 +67,18 @@ $$('#my-login-screen .login-button').on('click', function () {
     // Alert username and password
     app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+// Find
+$$('#my-form').on('submit', function () {
+    //
+    app.preloader.show();    
+    //
+    var locality = $$('#my-form [name="text"]').val();
+    //
+    app.request.get('http://myfoci.localhost/ajax/f7', {locality: locality}, function (data) {
+        $$('.login').html(data);
+        console.log(data);
+        //
+        app.preloader.hide();
+    });
+});

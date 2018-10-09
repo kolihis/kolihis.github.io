@@ -110,121 +110,87 @@
                         <!-- Scrollable page content-->
                         <div class="page-content">
 
-                            <!-- Form -->   
-                            <div class="block-title">Navigation</div>
-                            <form id="my-form" action="send-here.html" method="GET" class="form-ajax-submit list">
-                                <ul>
-                                    <li>
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">
-                                                <div class="item-title item-label">Name</div>
-                                                <div class="item-input-wrap">
-                                                    <input type="text" name="name" placeholder="Your name">
+                            <!-- Form -->                               
+                            <form id="my-form" action="" method="GET" class="form-ajax-submit list">
+                                <div class="block-title">Form Example</div>
+                                <div class="list no-hairlines-md">
+                                    <ul>
+                                        <li>
+                                            <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label">Name</div>
+                                                    <div class="item-input-wrap">
+                                                        <input type="text" name="text" placeholder="Your name" required validate>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">
-                                                <div class="item-title item-label">E-mail</div>
-                                                <div class="item-input-wrap">
-                                                    <input type="email" name="email" placeholder="E-mail">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">
-                                                <div class="item-title item-label">Gender</div>
-                                                <div class="item-input-wrap">
-                                                    <select name="gender">
-                                                        <option value="male" selected>Male</option>
-                                                        <option value="female">Female</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item-content">
-                                            <div class="item-inner">
-                                                <div class="item-title">Toggle</div>
-                                                <div class="item-after">
-                                                    <label class="toggle toggle-init">
-                                                        <input type="checkbox" name="toggle" value="yes"><i class="toggle-icon"></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                                <div class="block block-strong">
+                                    <p class="row">
+                                        <button class="col button button-fill button-find">Cari</button>                                        
+                                    </p>                                    
+                                </div>    
                             </form>
-                            <div class="block block-strong row">
-                                <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
-                                <div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div>
-                            </div>
 
-                            <div class="block block-strong">
-                                <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-                                <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-                            </div>
-
-                            <div class="block-title">Navigation</div>
-                            <div class="list">
-                                <ul>
-                                    <li>
-                                        <a href="/about/" class="item-content item-link">
-                                            <div class="item-inner">
-                                                <div class="item-title">About</div>
-                                            </div>
+                            <!-- Data Table -->
+                            <div class="card data-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="label-cell">Lokaliti</th>
+                                            <th class="numeric-cell">Klasifikasi Foci</th>
+                                            <th class="numeric-cell">Tahap Receptivity</th>
+                                            <th class="numeric-cell">Tahap Vurnability</th>
+                                            <th class="numeric-cell">Tahap Re-Introduction</th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each products}}
+                                        <tr>
+                                            <td class="label-cell">Frozen yogurt</td>
+                                            <td class="numeric-cell">159</td>
+                                            <td class="numeric-cell">6.0</td>
+                                            <td class="numeric-cell">24</td>
+                                            <td class="numeric-cell">4.0</td>
+                                        </tr>    
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                                <div class="data-table-footer">
+                                    <div class="data-table-rows-select">
+                                        Per page:
+                                        <div class="input input-dropdown">
+                                            <select>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="data-table-pagination">
+                                        <span class="data-table-pagination-label">1-5 of 10</span>
+                                        <a href="#" class="link disabled">
+                                            <i class="icon icon-prev color-gray"></i>
                                         </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="block-title">Modals</div>
-                            <div class="block block-strong">
-                                <div class="row">
-                                    <div class="col-50">
-                                        <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
-                                    </div>
-                                    <div class="col-50">
-                                        <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+                                        <a href="#" class="link">
+                                            <i class="icon icon-next color-gray"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="block-title">Panels</div>
-                            <div class="block block-strong">
-                                <div class="row">
-                                    <div class="col-50">
-                                        <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
-                                    </div>
-                                    <div class="col-50">
-                                        <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
-                            <div class="list links-list searchbar-hide-on-search">
-                                <ul>
-                                    <li>
-                                        <a href="/page-loader-template7/vladimir/123/about-me/1/?start=0&end=30#top">Template7 Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="/page-loader-component/vladimir/123/about-me/1/?start=0&end=30#top">Component Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
-                                    </li>
-                                    <li>
-                                        <a href="/request-and-load/user/123456/">Request Data & Load</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <script>
+                                return {
+                                    data: function () {
+                                        return {
+                                            products: this.$root.products,
+                                        };
+                                    }
+                                };
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
